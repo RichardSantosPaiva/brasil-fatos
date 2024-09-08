@@ -75,10 +75,111 @@ button{
 .descricao-meta {
     margin: 10px 0;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("imagens/fundojpg.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Efeito de desfoque no fundo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(8px);
+    z-index: -1; /* Coloca o fundo desfocado atrás do conteúdo */
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+header div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+main {
+    height: calc(100vh - 80px); /* Ajuste conforme a altura do header e footer */
+    padding: 20px;
+}
+
+.pesquisa-container {
+    margin: auto;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(4, 118, 88, 0.416);
+}
+
+.pesquisa-container p {
+ text-align: center;   
+}
+
+input {
+    border-radius: 10px;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: auto;
+    display: block;
+    padding: 8px;
+}
+
+button{
+    background: rgba(30, 161, 30, 0.7); /* Verde com 70% de opacidade */
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    width: 40%;
+    display: block;
+    margin: 10px auto ;
+}
+
+a {
+    text-align: center;
+    padding: 2px;
+    display: block;
+}
+
+.item-resultado {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.item-resultado img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+.descricao-meta {
+    margin: 10px 0;
+}
 
 footer {
+    background: rgba(30, 161, 30, 0.7); /* Verde com 70% de opacidade */
+    background-size:cover ;
     z-index: -1;
-    background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -86,6 +187,11 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.item-resultado img{
+    display: block;
+    margin: auto;
+} 
 
 .item-resultado img{
     display: block;
